@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Future: 2025 Report (Vanilla CSS)</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <div class="logo-icon">U</div>
+                <span>UrbanFuture</span>
+            </div>
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#findings">Key Findings</a>
+                <a href="#strategies">Strategies</a>
+            </div>
+            <button class="btn-download">Download</button>
+        </div>
+    </nav>
+
+    <!-- Hero Slider Section -->
+    <header id="overview" class="hero">
+        <div class="container hero-grid">
+            <div style="z-index: 10;">
+                <div class="badge"><span class="pulse-dot"></span> 2025 Annual Report</div>
+                <h1>Designing the <br><span class="gradient-text">Cities of Tomorrow</span></h1>
+                <p>An interactive exploration of the 2025 Global Sustainable Urban Development Report. Discover how smart infrastructure and green policies are reshaping urban living.</p>
+                <div class="hero-buttons">
+                    <button onclick="document.getElementById('findings').scrollIntoView()" class="btn-primary">View Findings</button>
+                </div>
+            </div>
+
+            <!-- Custom Image Slider -->
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1449824913929-79ae3609f7a3?q=80&w=1200&auto=format&fit=crop" alt="Modern Cityscape">
+                    <div class="slide-caption">
+                        <h3>Sustainable Skylines</h3>
+                        <p>Reducing carbon footprints through vertical integration.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" alt="Green Office">
+                    <div class="slide-caption">
+                        <h3>Workplace Wellness</h3>
+                        <p>Integrating nature into corporate environments.</p>
+                    </div>
+                </div>
+                <!-- Slider Controls -->
+                <button onclick="changeSlide(-1)" class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button onclick="changeSlide(1)" class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Metrics Section -->
+    <section class="metrics-section">
+        <div class="container metrics-grid">
+            <div class="metric-item">
+                <div class="metric-number count-up" data-target="68">0</div>
+                <div class="metric-label">Urban Population (%)</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number count-up" data-target="40">0</div>
+                <div class="metric-label">Emission Reduction (%)</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number count-up" data-target="150">0</div>
+                <div class="metric-label">Smart Cities</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-number count-up" data-target="2">0</div>
+                <div class="metric-label">Trillion $ Inv.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Interactive Tabs / Findings Section -->
+    <section id="findings" class="section">
+        <div class="container">
+            <div class="tabs-header">
+                <h2>Interactive Key Findings</h2>
+                <p>Click the tabs below to explore the core areas of focus for the 2025 sustainability initiative. This interface is built entirely with custom CSS and JavaScript.</p>
+            </div>
+
+            <div class="tabs-container">
+                <!-- Tab Buttons -->
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab(event, 'tab-env')"><i class="fas fa-leaf"></i> Environmental</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-econ')"><i class="fas fa-chart-line"></i> Economic</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-soc')"><i class="fas fa-users"></i> Social</button>
+                </div>
+
+                <!-- Tab Content: Environmental -->
+                <div id="tab-env" class="tab-content active">
+                    <div class="tab-layout">
+                        <div class="tab-text">
+                            <h3>Accelerating Green Infrastructure</h3>
+                            <p>Cities are rapidly adopting policies to mandate green spaces and renewable energy integration in new developments. The focus has shifted from preservation to active ecological restoration within city limits.</p>
+                            <ul class="tab-list">
+                                <li>40% mandated green roof coverage by 2030.</li>
+                                <li>Phasing out of municipal fossil-fuel vehicles.</li>
+                                <li>Implementation of circular water recycling systems.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-image">
+                            <i class="fas fa-tree text-green-500" style="color: var(--accent-green);"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Economic -->
+                <div id="tab-econ" class="tab-content">
+                    <div class="tab-layout">
+                        <div class="tab-text">
+                            <h3>The Sustainable Economy Boom</h3>
+                            <p>Transitioning to sustainable urban models is no longer viewed as a cost, but as the primary driver for economic growth and job creation in the technology and construction sectors.</p>
+                            <ul class="tab-list">
+                                <li>$2 Trillion projected investment over 5 years.</li>
+                                <li>Creation of 5 million new "green collar" jobs globally.</li>
+                                <li>Tax incentives for commercial building retrofits.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-image">
+                            <i class="fas fa-coins" style="color: #fbbf24;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Social -->
+                <div id="tab-soc" class="tab-content">
+                    <div class="tab-layout">
+                        <div class="tab-text">
+                            <h3>Community-Centric Design</h3>
+                            <p>Urban planning is pivoting to prioritize human well-being, equity, and accessibility. The "15-minute city" concept ensures all essential services are within a short walk or bike ride.</p>
+                            <ul class="tab-list">
+                                <li>Reclaiming 30% of street space for pedestrians.</li>
+                                <li>Affordable housing quotas in all new transit hubs.</li>
+                                <li>Digital literacy programs for inclusive smart city access.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-image">
+                            <i class="fas fa-hands-helping" style="color: var(--accent-blue);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Pillars / Modal Section -->
+    <section id="strategies" class="section strategies-section">
+        <div class="container">
+            <div class="strategies-header">
+                <div>
+                    <h2>Strategic Pillars</h2>
+                    <p>Three core methodologies identified. Click a card to open a modal window.</p>
+                </div>
+            </div>
+
+            <div class="pillars-grid">
+                <!-- Card 1 -->
+                <div class="pillar-card" onclick="openModal('modal1')">
+                    <div class="pillar-icon icon-blue"><i class="fas fa-bolt"></i></div>
+                    <h3>The Smart Grid</h3>
+                    <p>Decentralized energy systems reducing transmission loss and enabling peer-to-peer energy trading.</p>
+                    <span class="card-link link-blue">Read Case Study</span>
+                </div>
+                <!-- Card 2 -->
+                <div class="pillar-card" onclick="openModal('modal2')">
+                    <div class="pillar-icon icon-green"><i class="fas fa-leaf"></i></div>
+                    <h3>Biophilic Design</h3>
+                    <p>Integrating vegetative walls and vertical forests to combat the urban heat island effect.</p>
+                    <span class="card-link link-green">View Framework</span>
+                </div>
+                <!-- Card 3 -->
+                <div class="pillar-card" onclick="openModal('modal3')">
+                    <div class="pillar-icon icon-purple"><i class="fas fa-bus"></i></div>
+                    <h3>Mobility as a Service</h3>
+                    <p>Unifying public transport, ride-sharing, and micro-mobility into single digital platforms.</p>
+                    <span class="card-link link-purple">Explore Data</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Carousel Section -->
+    <section class="section voices-section">
+        <div class="container">
+            <h2>Expert Perspectives</h2>
+            <div class="carousel-wrapper">
+                <div class="quote-slide active">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote-text">"The cities that will succeed in the next decade are those that treat data as a public utility."</p>
+                    <div class="quote-author">Dr. Sarah Jenkins</div>
+                </div>
+                <div class="quote-slide">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote-text">"We are moving from an era of building 'for' cars to building 'for' people."</p>
+                    <div class="quote-author">Alejandro Aravena</div>
+                </div>
+            </div>
+            <div class="carousel-dots">
+                <button onclick="setQuote(0)" class="dot active"></button>
+                <button onclick="setQuote(1)" class="dot"></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">UrbanFuture</div>
+            <p class="footer-copy">© 2025 Global Research Institute</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-overlay" onclick="closeModal('modal1')"></div>
+        <div class="modal-content">
+            <div class="modal-header bg-blue">
+                <button onclick="closeModal('modal1')" class="btn-close"><i class="fas fa-times"></i></button>
+                <h2 class="modal-title">The Smart Grid Revolution</h2>
+            </div>
+            <div class="modal-body">
+                <p>Implementing IoT sensors and decentralized storage units (batteries) at the neighborhood level.</p>
+                <ul class="modal-list">
+                    <li><i class="fas fa-check" style="color:var(--accent-green)"></i> Reduced peak load by 14%</li>
+                    <li><i class="fas fa-check" style="color:var(--accent-green)"></i> 20% lower consumer costs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-overlay" onclick="closeModal('modal2')"></div>
+        <div class="modal-content">
+            <div class="modal-header bg-green">
+                <button onclick="closeModal('modal2')" class="btn-close"><i class="fas fa-times"></i></button>
+                <h2 class="modal-title">Biophilic Urbanism</h2>
+            </div>
+            <div class="modal-body">
+                <p>Mandating 100% greenery replacement for new buildings (LUSH Program).</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-overlay" onclick="closeModal('modal3')"></div>
+        <div class="modal-content">
+            <div class="modal-header bg-purple">
+                <button onclick="closeModal('modal3')" class="btn-close"><i class="fas fa-times"></i></button>
+                <h2 class="modal-title">MaaS Adoption</h2>
+            </div>
+            <div class="modal-body">
+                <p>Moving away from private ownership to consuming mobility as a service.</p>
+                <div class="progress-group">
+                    <div class="progress-header"><span>Public Transit Ridership</span><span>+35%</span></div>
+                    <div class="progress-track"><div class="progress-fill fill-purple"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
